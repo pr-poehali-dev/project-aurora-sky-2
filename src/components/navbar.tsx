@@ -11,9 +11,9 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center gap-3">
             <img
-              src="https://cdn.poehali.dev/projects/30cfddc5-5f5b-471d-ac78-f3b4cdcb7dd8/bucket/46383f56-8e27-408c-9c10-f51aa08353d0.jpg"
+              src="https://cdn.poehali.dev/projects/30cfddc5-5f5b-471d-ac78-f3b4cdcb7dd8/bucket/6521f578-3ede-42a9-9b75-5359b2546230.jpg"
               alt="Panda Vape"
-              className="h-10 w-10 rounded-full object-cover ring-2 ring-red-500/40"
+              className="h-10 w-10 rounded-full object-cover ring-2 ring-blue-500/40"
             />
             <h1 className="font-orbitron text-xl font-bold text-white">
               PANDA<span className="text-red-500">VAPE</span>
