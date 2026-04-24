@@ -9,7 +9,12 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-[9999] bg-black/95 backdrop-blur-md border-b border-red-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center gap-3">
+            <img
+              src="https://cdn.poehali.dev/projects/30cfddc5-5f5b-471d-ac78-f3b4cdcb7dd8/bucket/46383f56-8e27-408c-9c10-f51aa08353d0.jpg"
+              alt="Panda Vape"
+              className="h-10 w-10 rounded-full object-cover ring-2 ring-red-500/40"
+            />
             <h1 className="font-orbitron text-xl font-bold text-white">
               PANDA<span className="text-red-500">VAPE</span>
             </h1>
