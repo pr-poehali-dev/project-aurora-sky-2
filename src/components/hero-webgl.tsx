@@ -143,35 +143,53 @@ export const Hero3DWebGL = () => {
         <img
           src="https://cdn.poehali.dev/projects/30cfddc5-5f5b-471d-ac78-f3b4cdcb7dd8/bucket/6521f578-3ede-42a9-9b75-5359b2546230.jpg"
           alt="Panda Vape"
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-50 scale-110"
+          style={{ objectPosition: "center 20%" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
       </div>
 
-      {/* Синее свечение */}
+      {/* Синее свечение в центре */}
       <div className="absolute inset-0 z-10 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.15)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_40%,rgba(59,130,246,0.12)_0%,transparent_70%)]" />
       </div>
 
-      {/* Текст поверх */}
-      <div className="h-screen items-center w-full absolute z-[60] pointer-events-none px-10 flex justify-center flex-col">
-        <div className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-orbitron uppercase">
-          <div className="flex space-x-2 lg:space-x-6 overflow-hidden text-white drop-shadow-[0_0_20px_rgba(59,130,246,0.8)]">
-            {titleWords.map((word, index) => (
-              <div
-                key={index}
-                className={index < visibleWords ? "fade-in" : ""}
-                style={{
-                  animationDelay: `${index * 0.13 + (delays[index] || 0)}s`,
-                  opacity: index < visibleWords ? undefined : 0,
-                }}
-              >
-                {word}
-              </div>
-            ))}
+      {/* Контент */}
+      <div className="h-screen w-full absolute z-[60] px-6 flex flex-col items-center justify-end pb-24 md:pb-32">
+
+        {/* Бейдж */}
+        <div className={subtitleVisible ? "fade-in mb-6" : "opacity-0 mb-6"}>
+          <span className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm uppercase tracking-widest">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+            Более 30 вкусов · Доставка по России
+          </span>
+        </div>
+
+        {/* Заголовок */}
+        <div className="text-center mb-4">
+          <div className="text-5xl md:text-7xl xl:text-8xl font-extrabold font-orbitron uppercase">
+            <div className="flex space-x-3 lg:space-x-6 justify-center overflow-hidden">
+              {titleWords.map((word, index) => (
+                <div
+                  key={index}
+                  className={index < visibleWords ? "fade-in" : ""}
+                  style={{
+                    animationDelay: `${index * 0.13 + (delays[index] || 0)}s`,
+                    opacity: index < visibleWords ? undefined : 0,
+                    color: index === 0 ? "white" : "#60a5fa",
+                    textShadow: index === 1 ? "0 0 40px rgba(59,130,246,0.7)" : "0 0 30px rgba(255,255,255,0.2)",
+                  }}
+                >
+                  {word}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="text-xs md:text-xl xl:text-2xl 2xl:text-3xl mt-2 overflow-hidden text-blue-300 font-bold max-w-4xl mx-auto text-center px-4">
+
+        {/* Подзаголовок */}
+        <div className="text-base md:text-xl text-gray-300 mb-10 text-center max-w-lg">
           <div
             className={subtitleVisible ? "fade-in-subtitle" : ""}
             style={{
@@ -181,6 +199,42 @@ export const Hero3DWebGL = () => {
           >
             {subtitle}
           </div>
+        </div>
+
+        {/* Кнопки */}
+        <div
+          className={subtitleVisible ? "fade-in flex flex-col sm:flex-row gap-4" : "opacity-0 flex flex-col sm:flex-row gap-4"}
+          style={{ animationDelay: `${titleWords.length * 0.13 + 0.6}s` }}
+        >
+          <a
+            href="#flavors"
+            className="px-8 py-3 bg-blue-500 hover:bg-blue-400 text-white font-bold font-orbitron uppercase text-sm rounded-lg transition-all duration-200 shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] pointer-events-auto"
+          >
+            Смотреть каталог
+          </a>
+          <a
+            href="#faq"
+            className="px-8 py-3 border border-blue-500/40 hover:border-blue-400 text-blue-300 hover:text-white font-bold font-orbitron uppercase text-sm rounded-lg transition-all duration-200 backdrop-blur-sm pointer-events-auto"
+          >
+            Узнать больше
+          </a>
+        </div>
+
+        {/* Статистика */}
+        <div
+          className={subtitleVisible ? "fade-in flex gap-8 mt-12 text-center" : "opacity-0 flex gap-8 mt-12 text-center"}
+          style={{ animationDelay: `${titleWords.length * 0.13 + 0.9}s` }}
+        >
+          {[
+            { value: "30+", label: "вкусов" },
+            { value: "6000", label: "затяжек" },
+            { value: "1 день", label: "доставка" },
+          ].map((stat, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <span className="text-2xl md:text-3xl font-extrabold text-white font-orbitron">{stat.value}</span>
+              <span className="text-xs text-blue-400 uppercase tracking-widest mt-1">{stat.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
