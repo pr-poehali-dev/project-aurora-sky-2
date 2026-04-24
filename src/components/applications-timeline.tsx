@@ -11,16 +11,16 @@ export function ApplicationsTimeline() {
             Найди свой идеальный вкус из нашего каталога.
           </p>
           <div className="space-y-3">
-            <div className="flex items-center gap-3 text-red-400 text-sm">
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div className="flex items-center gap-3 text-blue-400 text-sm">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               Тропические и ягодные вкусы
             </div>
-            <div className="flex items-center gap-3 text-red-400 text-sm">
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div className="flex items-center gap-3 text-blue-400 text-sm">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               Холодная мята и менторл
             </div>
-            <div className="flex items-center gap-3 text-red-400 text-sm">
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div className="flex items-center gap-3 text-blue-400 text-sm">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               Классический табак и десерты
             </div>
           </div>
@@ -36,16 +36,16 @@ export function ApplicationsTimeline() {
             и через СБП.
           </p>
           <div className="space-y-3">
-            <div className="flex items-center gap-3 text-red-400 text-sm">
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div className="flex items-center gap-3 text-blue-400 text-sm">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               Оплата картой и СБП
             </div>
-            <div className="flex items-center gap-3 text-red-400 text-sm">
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div className="flex items-center gap-3 text-blue-400 text-sm">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               Наличными при получении
             </div>
-            <div className="flex items-center gap-3 text-red-400 text-sm">
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div className="flex items-center gap-3 text-blue-400 text-sm">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               Безопасная оплата с защитой покупателя
             </div>
           </div>
@@ -61,16 +61,16 @@ export function ApplicationsTimeline() {
             Доставка по всей России.
           </p>
           <div className="space-y-3">
-            <div className="flex items-center gap-3 text-red-400 text-sm">
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div className="flex items-center gap-3 text-blue-400 text-sm">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               Отправка в день заказа
             </div>
-            <div className="flex items-center gap-3 text-red-400 text-sm">
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div className="flex items-center gap-3 text-blue-400 text-sm">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               СДЭК, Почта России, курьер
             </div>
-            <div className="flex items-center gap-3 text-red-400 text-sm">
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div className="flex items-center gap-3 text-blue-400 text-sm">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               Дискретная упаковка
             </div>
           </div>
