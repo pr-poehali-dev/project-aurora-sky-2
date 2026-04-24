@@ -3,51 +3,51 @@ import { Badge } from "@/components/ui/badge"
 
 const features = [
   {
-    title: "Адаптивная нейрообработка",
-    description: "Самооптимизирующиеся алгоритмы, которые обучаются на нейронных паттернах и улучшают интерпретацию сигналов.",
-    icon: "brain",
-    badge: "ИИ",
+    title: "Богатый выбор вкусов",
+    description: "Более 30 вкусов: тропические фрукты, свежая мята, ягоды, десерты и классический табак.",
+    icon: "taste",
+    badge: "30+ вкусов",
   },
   {
-    title: "Медицинская защита",
-    description: "Шифрование по стандартам FDA со сквозной защитой конфиденциальных нейронных данных.",
-    icon: "lock",
-    badge: "Сертификат",
+    title: "До 6000 затяжек",
+    description: "Мощный встроенный аккумулятор и большой объём жидкости обеспечивают длительное использование.",
+    icon: "battery",
+    badge: "Long-life",
   },
   {
-    title: "Интуитивное управление",
-    description: "Естественная трансляция мыслей в действия с откликом менее миллисекунды и точностью 99,7%.",
-    icon: "globe",
-    badge: "Точность",
+    title: "Никотиновые соли",
+    description: "Гладкое и насыщенное попадание никотина без жёсткости — современная формула солевого никотина.",
+    icon: "drop",
+    badge: "Соль",
   },
   {
-    title: "Предиктивная калибровка",
-    description: "ML-модели, которые предугадывают намерения пользователя и оптимизируют нейронные пути.",
-    icon: "zap",
-    badge: "Умный",
+    title: "Компактный формат",
+    description: "Лёгкий и карманный дизайн — удобно брать с собой везде. Не нужна зарядка или заправка.",
+    icon: "pocket",
+    badge: "Портативно",
   },
   {
-    title: "Биометрическая интеграция",
-    description: "Бесшовная синхронизация с мониторингом жизненных показателей для контроля здоровья.",
-    icon: "link",
-    badge: "Связь",
+    title: "Контроль качества",
+    description: "Каждое устройство проходит проверку на заводе: стабильная тяга, чистый вкус с первой до последней затяжки.",
+    icon: "check",
+    badge: "Качество",
   },
   {
-    title: "Поддержка XR",
-    description: "Нативная совместимость с AR/VR-средами для терапевтических и рабочих приложений.",
-    icon: "target",
-    badge: "XR Ready",
+    title: "Быстрая доставка",
+    description: "Отправляем в день заказа. Дискретная упаковка, доставка по всей России.",
+    icon: "delivery",
+    badge: "Быстро",
   },
 ]
 
 export function FeaturesSection() {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section id="flavors" className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Возможности нового поколения</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Почему выбирают нас</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Почувствуйте будущее с технологиями, которые переопределяют возможное
+            Электронные одноразовые сигареты премиального качества по доступной цене
           </p>
         </div>
 
@@ -61,12 +61,12 @@ export function FeaturesSection() {
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-3xl">
-                    {feature.icon === "brain" && "&#129504;"}
-                    {feature.icon === "lock" && "&#128274;"}
-                    {feature.icon === "globe" && "&#127760;"}
-                    {feature.icon === "zap" && "&#9889;"}
-                    {feature.icon === "link" && "&#128279;"}
-                    {feature.icon === "target" && "&#127919;"}
+                    {feature.icon === "taste" && "🍓"}
+                    {feature.icon === "battery" && "🔋"}
+                    {feature.icon === "drop" && "💧"}
+                    {feature.icon === "pocket" && "✌️"}
+                    {feature.icon === "check" && "✅"}
+                    {feature.icon === "delivery" && "🚀"}
                   </span>
                   <Badge variant="secondary" className="bg-accent text-accent-foreground">
                     {feature.badge}
