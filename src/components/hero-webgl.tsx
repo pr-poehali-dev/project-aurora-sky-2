@@ -138,16 +138,25 @@ export const Hero3DWebGL = () => {
 
   return (
     <div className="h-screen bg-black relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none z-10">
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
-        <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-black to-transparent" />
-        <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-black to-transparent" />
+      {/* Панда на весь фон */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://cdn.poehali.dev/projects/30cfddc5-5f5b-471d-ac78-f3b4cdcb7dd8/bucket/6521f578-3ede-42a9-9b75-5359b2546230.jpg"
+          alt="Panda Vape"
+          className="w-full h-full object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60" />
       </div>
 
-      <div className="h-screen uppercase items-center w-full absolute z-[60] pointer-events-none px-10 flex justify-center flex-col">
-        <div className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-orbitron">
-          <div className="flex space-x-2 lg:space-x-6 overflow-hidden text-white">
+      {/* Синее свечение */}
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.15)_0%,transparent_70%)]" />
+      </div>
+
+      {/* Текст поверх */}
+      <div className="h-screen items-center w-full absolute z-[60] pointer-events-none px-10 flex justify-center flex-col">
+        <div className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-orbitron uppercase">
+          <div className="flex space-x-2 lg:space-x-6 overflow-hidden text-white drop-shadow-[0_0_20px_rgba(59,130,246,0.8)]">
             {titleWords.map((word, index) => (
               <div
                 key={index}
@@ -162,7 +171,7 @@ export const Hero3DWebGL = () => {
             ))}
           </div>
         </div>
-        <div className="text-xs md:text-xl xl:text-2xl 2xl:text-3xl mt-2 overflow-hidden text-white font-bold max-w-4xl mx-auto text-center px-4">
+        <div className="text-xs md:text-xl xl:text-2xl 2xl:text-3xl mt-2 overflow-hidden text-blue-300 font-bold max-w-4xl mx-auto text-center px-4">
           <div
             className={subtitleVisible ? "fade-in-subtitle" : ""}
             style={{
@@ -174,19 +183,6 @@ export const Hero3DWebGL = () => {
           </div>
         </div>
       </div>
-
-      <Canvas
-        flat
-        gl={{
-          antialias: true,
-          alpha: false,
-          powerPreference: "high-performance",
-        }}
-        camera={{ position: [0, 0, 1] }}
-        style={{ background: "#000000" }}
-      >
-        <Scene />
-      </Canvas>
     </div>
   )
 }
